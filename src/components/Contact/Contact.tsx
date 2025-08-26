@@ -10,7 +10,6 @@ export function Contact() {
                    Contact
                 </Text>
             </div>
-
         </Paper>
     );
 }
