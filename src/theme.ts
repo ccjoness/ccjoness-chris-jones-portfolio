@@ -1,5 +1,11 @@
-import { createTheme } from '@mantine/core';
+import {createTheme, Text} from '@mantine/core';
 
 export const theme = createTheme({
-  /** Put your mantine theme override here */
+    components: {
+        Text: Text.extend({
+            defaultProps: {
+                color: 'cyan',
+            },
+        })
+    },
 });

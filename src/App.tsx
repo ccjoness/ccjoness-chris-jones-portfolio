@@ -1,5 +1,5 @@
 import '@mantine/core/styles.css';
-
+import '@/styles/global.module.css';
 import { MantineProvider } from '@mantine/core';
 import { Router } from './Router';
 import { theme } from './theme';

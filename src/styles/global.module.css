@@ -1,0 +1,56 @@
+/* Global NavLink Animations */
+.navLink {
+    color: rgba(139,92,246,1) !important;
+    border-radius: var(--mantine-radius-sm) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    width: 100%;
+}
+
+.navLink:hover {
+    background: linear-gradient(to right, rgba(139,92,246,1) 44%,rgba(41,137,216,0) 100%) !important;
+    color: #EAD7D1 !important;
+    transform: translateX(4px) !important;
+}
+
+.navLink[data-active="true"] {
+    background: linear-gradient(to right, rgba(139,92,246,1) 44%,rgba(41,137,216,0) 100%) !important;
+    color: #EAD7D1 !important;
+    font-weight: 600 !important;
+    transform: translateX(8px) !important;
+    /*box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4) !important;*/
+}
+
+.navLink[data-active="true"]:hover {
+    background: linear-gradient(to right, rgba(139,92,246,1) 44%,rgba(41,137,216,0) 100%) !important;
+    color: #EAD7D1 !important;
+    transform: translateX(8px) scale(1.02) !important;
+}
+
+/* Shimmer effect for active links */
+.navLink[data-active="true"]::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: translateX(-100%);
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+/* Keyframe animation for shimmer effect */
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Additional smooth transitions for state changes */
+.navLink * {
+    transition: inherit !important;
+}
