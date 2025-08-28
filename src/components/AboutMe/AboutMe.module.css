@@ -1,43 +1,17 @@
-/*.container {*/
-/*  display: flex;*/
-/*  align-items: center;*/
-/*  justify-content: center;*/
-/*  min-height: 100vh;*/
-/*  padding: 0;*/
-/*  margin: 0;*/
-/*}*/
-
-/*.content {*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  align-items: center;*/
-/*  justify-content: center;*/
-/*  text-align: center;*/
-/*  max-width: 580px;*/
-/*  width: 100%;*/
-/*}*/
-
-/*.title {*/
-/*  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));*/
-/*  font-size: rem(100px);*/
-/*  font-weight: 900;*/
-/*  letter-spacing: rem(-2px);*/
-
-/*  @media (max-width: $mantine-breakpoint-md) {*/
-/*    font-size: rem(50px);*/
-/*  }*/
-/*}*/
+/* Content Display */
 .paperHeight {
-    height: calc(93dvh - var(--app-shell-header-offset, 0rem) + var(--app-shell-padding));
-    margin-bottom: 2rem;
+    height: calc(100dvh - var(--app-shell-header-offset, 0rem) - var(--app-shell-padding));
+    /*margin-bottom: 2rem;*/
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    /*border: solid 1px rgba(255, 255, 255, 0.1);*/
 }
 
 .textHxVCenter {
     position: relative;
-    padding: 2rem;
+    padding: 3rem;
 }
 
 /* Top right corner borders */

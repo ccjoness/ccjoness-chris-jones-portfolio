@@ -1,5 +1,5 @@
 import {Text, Paper} from '@mantine/core';
-import classes from './Contact.module.css';
+import classes from '@/styles/global.module.css';
 
 export function Contact() {
 

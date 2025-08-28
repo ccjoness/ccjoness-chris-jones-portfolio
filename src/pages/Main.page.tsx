@@ -107,7 +107,7 @@ export function MainPage() {
     return (
         <AppShell
             header={{height: {base: 60, xxs: 60, xs: 60, sm: 0, md: 0, lg: 0, xl: 0},}}
-            navbar={{width: 200, breakpoint: 'sm', collapsed: {mobile: !opened}}}
+            navbar={{width: 300, breakpoint: 'sm', collapsed: {mobile: !opened}}}
             padding="md"
         >
             <AppShell.Header>

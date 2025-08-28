@@ -1,5 +1,5 @@
 import {Text, Paper} from '@mantine/core';
-import classes from './Articles.module.css';
+import classes from '@/styles/global.module.css';
 
 
 export function Articles() {
