@@ -57,7 +57,7 @@
 
 /* Content Display */
 .paperHeight {
-    height: calc(100dvh - var(--app-shell-header-offset, 0rem) - var(--app-shell-padding));
+    min-height: calc(100dvh - var(--app-shell-header-offset, 0rem) - var(--app-shell-padding));
     /*margin-bottom: 2rem;*/
     margin: 0;
     /*display: flex;*/

@@ -11,7 +11,7 @@ export function Projects() {
                     <h1>Projects</h1>
                 </Center>
             </div>
-            <Grid>
+            <Grid justify="center" align="center">
                 <Grid.Col span={4}>
                     <ProjectCard
                         title="Cat ipsum dolor sit amet"
@@ -24,32 +24,48 @@ export function Projects() {
                     />
                 </Grid.Col>
                 <Grid.Col span={4}>
-                    <div className={classes.textHxVCenter}>
-                        <Text ta="left" size="lg" maw={580} mx="auto" mt="xl">
-                            Project 2
-                        </Text>
-                    </div>
+                    <ProjectCard
+                        title="Cat ipsum dolor sit amet"
+                        description="Cat ipsum dolor sit amet, trip owner up in kitchen i want food. Roll over and sun my belly scream at teh bath so sleep on dog bed, force dog to sleep on floor. Flex claws on the human's belly and purr like a lawnmower spend all night ensuring people don't sleep sleep all day wake up wander around the house making large amounts of noise jump on top of your human's bed and fall asleep again i love cuddles. Cat cat moo moo lick ears lick paws. Steal raw zucchini off kitchen counter cat meoooow i iz master of hoomaan, not hoomaan master of i, oooh damn dat dog, and i like big cats and i can not lie."
+                        image="https://placehold.co/160"
+                        imageAlt="Cat ipsum dolor sit amet"
+                        buttonText="View Project"
+                        buttonLink="https://www.google.com"
+                        tags={['React', 'TypeScript', 'Mantine', "foo", "bar", "baz"]}
+                    />
                 </Grid.Col>
                 <Grid.Col span={4}>
-                    <div className={classes.textHxVCenter}>
-                        <Text ta="left" size="lg" maw={580} mx="auto" mt="xl">
-                            Project 3
-                        </Text>
-                    </div>
+                    <ProjectCard
+                        title="Cat ipsum dolor sit amet"
+                        description="Cat ipsum dolor sit amet, trip owner up in kitchen i want food. Roll over and sun my belly scream at teh bath so sleep on dog bed, force dog to sleep on floor. Flex claws on the human's belly and purr like a lawnmower spend all night ensuring people don't sleep sleep all day wake up wander around the house making large amounts of noise jump on top of your human's bed and fall asleep again i love cuddles. Cat cat moo moo lick ears lick paws. Steal raw zucchini off kitchen counter cat meoooow i iz master of hoomaan, not hoomaan master of i, oooh damn dat dog, and i like big cats and i can not lie."
+                        image="https://placehold.co/160"
+                        imageAlt="Cat ipsum dolor sit amet"
+                        buttonText="View Project"
+                        buttonLink="https://www.google.com"
+                        tags={['React', 'TypeScript', 'Mantine', "foo", "bar", "baz"]}
+                    />
                 </Grid.Col>
                 <Grid.Col span={4}>
-                    <div className={classes.textHxVCenter}>
-                        <Text ta="left" size="lg" maw={580} mx="auto" mt="xl">
-                            Project 4
-                        </Text>
-                    </div>
+                    <ProjectCard
+                        title="Cat ipsum dolor sit amet"
+                        description="Cat ipsum dolor sit amet, trip owner up in kitchen i want food. Roll over and sun my belly scream at teh bath so sleep on dog bed, force dog to sleep on floor. Flex claws on the human's belly and purr like a lawnmower spend all night ensuring people don't sleep sleep all day wake up wander around the house making large amounts of noise jump on top of your human's bed and fall asleep again i love cuddles. Cat cat moo moo lick ears lick paws. Steal raw zucchini off kitchen counter cat meoooow i iz master of hoomaan, not hoomaan master of i, oooh damn dat dog, and i like big cats and i can not lie."
+                        image="https://placehold.co/160"
+                        imageAlt="Cat ipsum dolor sit amet"
+                        buttonText="View Project"
+                        buttonLink="https://www.google.com"
+                        tags={['React', 'TypeScript', 'Mantine', "foo", "bar", "baz"]}
+                    />
                 </Grid.Col>
                 <Grid.Col span={4}>
-                    <div className={classes.textHxVCenter}>
-                        <Text ta="left" size="lg" maw={580} mx="auto" mt="xl">
-                            Project 5
-                        </Text>
-                    </div>
+                    <ProjectCard
+                        title="Cat ipsum dolor sit amet"
+                        description="Cat ipsum dolor sit amet, trip owner up in kitchen i want food. Roll over and sun my belly scream at teh bath so sleep on dog bed, force dog to sleep on floor. Flex claws on the human's belly and purr like a lawnmower spend all night ensuring people don't sleep sleep all day wake up wander around the house making large amounts of noise jump on top of your human's bed and fall asleep again i love cuddles. Cat cat moo moo lick ears lick paws. Steal raw zucchini off kitchen counter cat meoooow i iz master of hoomaan, not hoomaan master of i, oooh damn dat dog, and i like big cats and i can not lie."
+                        image="https://placehold.co/160"
+                        imageAlt="Cat ipsum dolor sit amet"
+                        buttonText="View Project"
+                        buttonLink="https://www.google.com"
+                        tags={['React', 'TypeScript', 'Mantine', "foo", "bar", "baz"]}
+                    />
                 </Grid.Col>
             </Grid>
 

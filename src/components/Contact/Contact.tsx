@@ -1,14 +1,14 @@
-import {Text, Paper} from '@mantine/core';
+import {Text, Paper, Center} from '@mantine/core';
 import classes from '@/styles/global.module.css';
 
 export function Contact() {
 
     return (
         <Paper className={classes.paperHeight}>
-            <div className={classes.textHxVCenter}>
-                <Text  ta="left" size="lg" maw={580} mx="auto" mt="xl">
-                   Contact
-                </Text>
+            <div>
+                <Center>
+                    <h1>Contact</h1>
+                </Center>
             </div>
         </Paper>
     );

@@ -5,8 +5,6 @@ export function ProjectCard({title, description, image, imageAlt, buttonText, bu
     return (
         <div className={classes.textHxVCenter}>
             <Card shadow="sm" padding="lg" radius="md" withBorder>
-
-
                 <Group justify="center" mt="xs" mb="xs">
                     <h3>{title}</h3>
                 </Group>
