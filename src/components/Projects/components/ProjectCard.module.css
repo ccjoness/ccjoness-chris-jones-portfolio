@@ -1,0 +1,43 @@
+.projectCard {
+    position: relative;
+    padding: 15px;
+    background-color: transparent !important;
+}
+
+/* Top right corner borders */
+.projectCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 120px;
+    border-top: 3px solid;
+    border-right: 3px solid;
+    border-image: linear-gradient(135deg, transparent 0%, #8b5cf6 50%, transparent 100%) 1;
+    border-left: none;
+    border-bottom: none;
+}
+
+/* Bottom left corner borders */
+.projectCard::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    border-image: linear-gradient(315deg, transparent 0%, #8b5cf6 50%, transparent 100%) 1;
+    border-top: none;
+    border-right: none;
+}
+
+.tagHasUrl {
+    cursor: pointer;
+}
+
+.projectLinkButton {
+    background-color: #8b5cf6 !important;
+}
