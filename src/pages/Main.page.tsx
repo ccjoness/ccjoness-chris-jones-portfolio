@@ -1,16 +1,16 @@
-import {AboutMe} from '@/components/AboutMe/AboutMe';
+import { useEffect, useRef, useState } from 'react';
+import { IconBriefcase, IconMail, IconUser } from '@tabler/icons-react';
+import { AppShell, Burger, Container, Flex, Group, NavLink } from '@mantine/core';
+import { useDisclosure, useIntersection } from '@mantine/hooks';
+import { AboutMe } from '@/components/AboutMe/AboutMe';
+import { Contact } from '@/components/Contact/Contact';
 // import {Articles} from '@/components/Articles/Articles';
-import {Projects} from '@/components/Projects/Projects';
-import {Contact} from '@/components/Contact/Contact';
-import {AppShell, Burger, Group, NavLink, Container, Flex} from '@mantine/core';
-import {useDisclosure, useIntersection} from '@mantine/hooks';
-import {IconUser, IconBriefcase, IconMail} from '@tabler/icons-react';
-import {useRef, useState, useEffect} from 'react';
+import { Projects } from '@/components/Projects/Projects';
 import globalStyles from '@/styles/global.module.css';
 
 
 export function MainPage() {
-    const [opened = false, {toggle}] = useDisclosure();
+    const [opened = false, {toggle, close}] = useDisclosure();
     const [activeSection, setActiveSection] = useState('about');
 
     // Create refs for each section
@@ -105,69 +105,84 @@ export function MainPage() {
     };
 
     return (
-        <AppShell
-            header={{height: {base: 60, xxs: 60, xs: 60, sm: 0, md: 0, lg: 0, xl: 0},}}
-            navbar={{width: 300, breakpoint: 'sm', collapsed: {mobile: !opened}}}
-            padding="md"
-        >
-            <AppShell.Header>
-                <Group h="100%" px="md">
-                    <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm"/>
-                </Group>
-            </AppShell.Header>
-            <AppShell.Navbar p="md" bd="none">
-                <Flex
-                    h="100%"
-                    direction={{base: 'column'}}
-                    gap={{base: 'sm', sm: 'lg'}}
-                    justify={{sm: 'center'}}
-                >
-                    <NavLink
-                        className={globalStyles.navLink}
-                        label="About"
-                        leftSection={<IconUser size={16} stroke={1.5}/>}
-                        active={activeSection === 'about'}
-                        onClick={() => scrollToSection(aboutRef)}
-                    />
-                    <NavLink
-                        className={globalStyles.navLink}
-                        label="Projects"
-                        leftSection={<IconBriefcase size={16} stroke={1.5}/>}
-                        active={activeSection === 'projects'}
-                        onClick={() => scrollToSection(projectsRef)}
-                    />
-                    {/*<NavLink*/}
-                    {/*    className={globalStyles.navLink}*/}
-                    {/*    label="Articles"*/}
-                    {/*    leftSection={<IconBriefcase size={16} stroke={1.5}/>}*/}
-                    {/*    active={activeSection === 'articles'}*/}
-                    {/*    onClick={() => scrollToSection(articlesRef)}*/}
-                    {/*/>*/}
-                    <NavLink
-                        className={globalStyles.navLink}
-                        label="Contact"
-                        leftSection={<IconMail size={16} stroke={1.5}/>}
-                        active={activeSection === 'contact'}
-                        onClick={() => scrollToSection(contactRef)}
-                    />
-                </Flex>
-            </AppShell.Navbar>
-            <AppShell.Main>
-                <Container strategy="grid" size="95%" m={0}>
-                    <div ref={setAboutRef} id="about">
-                        <AboutMe/>
-                    </div>
-                    <div ref={setProjectsRef} id="projects">
-                        <Projects />
-                    </div>
-                    {/*<div ref={setArticlesRef} id="articles">*/}
-                    {/*    <Articles/>*/}
-                    {/*</div>*/}
-                    <div ref={setContactRef} id="contact">
-                        <Contact/>
-                    </div>
-                </Container>
-            </AppShell.Main>
-        </AppShell>
+      <AppShell
+        header={{ height: { base: 60, xxs: 60, xs: 60, sm: 0, md: 0, lg: 0, xl: 0 } }}
+        navbar={{ width: 300, breakpoint: 'sm', collapsed: { mobile: !opened } }}
+        padding="md"
+      >
+        <AppShell.Header>
+          <Group h="100%" px="md">
+            <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+          </Group>
+        </AppShell.Header>
+        <AppShell.Navbar p="md" bd="none">
+          <Flex
+            h="100%"
+            direction={{ base: 'column' }}
+            gap={{ base: 'sm', sm: 'lg' }}
+            justify={{ sm: 'center' }}
+          >
+            <NavLink
+              className={globalStyles.navLink}
+              label="About"
+              leftSection={<IconUser size={16} stroke={1.5} />}
+              active={activeSection === 'about'}
+              onClick={() => {
+                if (opened) {
+                  close();
+                }
+                scrollToSection(aboutRef);
+              }}
+            />
+            <NavLink
+              className={globalStyles.navLink}
+              label="Projects"
+              leftSection={<IconBriefcase size={16} stroke={1.5} />}
+              active={activeSection === 'projects'}
+              onClick={() => {
+                if (opened) {
+                  close();
+                }
+                scrollToSection(projectsRef);
+              }}
+            />
+            {/*<NavLink*/}
+            {/*    className={globalStyles.navLink}*/}
+            {/*    label="Articles"*/}
+            {/*    leftSection={<IconBriefcase size={16} stroke={1.5}/>}*/}
+            {/*    active={activeSection === 'articles'}*/}
+            {/*    onClick={() => scrollToSection(articlesRef)}*/}
+            {/*/>*/}
+            <NavLink
+              className={globalStyles.navLink}
+              label="Get in Touch"
+              leftSection={<IconMail size={16} stroke={1.5} />}
+              active={activeSection === 'contact'}
+              onClick={() => {
+                if (opened) {
+                  close();
+                }
+                scrollToSection(contactRef);
+              }}
+            />
+          </Flex>
+        </AppShell.Navbar>
+        <AppShell.Main>
+          <Container strategy="grid" size="95%" m={0}>
+            <div ref={setAboutRef} id="about">
+              <AboutMe />
+            </div>
+            <div ref={setProjectsRef} id="projects">
+              <Projects />
+            </div>
+            {/*<div ref={setArticlesRef} id="articles">*/}
+            {/*    <Articles/>*/}
+            {/*</div>*/}
+            <div ref={setContactRef} id="contact">
+              <Contact />
+            </div>
+          </Container>
+        </AppShell.Main>
+      </AppShell>
     );
 }

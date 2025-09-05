@@ -1,8 +1,7 @@
 /* Content Display */
 .paperHeight {
     height: calc(100dvh - var(--app-shell-header-offset, 0rem) - var(--app-shell-padding));
-    /*margin-bottom: 2rem;*/
-    margin: 0;
+    margin: 1rem 0 0;
     display: flex;
     align-items: center;
     justify-content: center;

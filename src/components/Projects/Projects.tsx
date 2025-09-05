@@ -69,10 +69,10 @@ export function Projects() {
           <h1>Projects</h1>
         </Center>
       </div>
-      <Grid justify="center" align="center">
+      <Grid justify="center" align="center" gutter={{ lg: 10, xl: 10 }} mb="xl">
         {projectCards &&
           projectCards.map((card, index) => (
-            <Grid.Col span={4} key={index}>
+            <Grid.Col span={{xs: 12, sm: 12, md: 4, lg: 4, xl: 4}} key={index}>
               <ProjectCard
                 key={card.title}
                 title={card.title}

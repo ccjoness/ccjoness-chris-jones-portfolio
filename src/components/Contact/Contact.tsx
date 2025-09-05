@@ -50,7 +50,7 @@ export function Contact() {
     <Paper className={classes.paperHeight}>
       <div className={classes.textHxVCenter}>
         <Grid>
-          <Grid.Col span={6}>
+          <Grid.Col span={{xs: 12, sm: 6, md: 6, lg: 6, xl: 6}}>
             <div>
               <Center>
                 <h1>Get in Touch</h1>
@@ -62,7 +62,7 @@ export function Contact() {
             </Text>
           </Grid.Col>
 
-          <Grid.Col span={6}>
+          <Grid.Col span={{xs: 12, sm: 6, md: 6, lg: 6, xl: 6}}>
             <form
               onReset={form.onReset}
               onSubmit={form.onSubmit(handleSubmit)}
