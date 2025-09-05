@@ -1,6 +1,4 @@
-import { useEffect } from 'react';
-import { Flex, Grid, Image, Paper, Text, useMantineTheme } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
+import { Flex, Grid, Image, Paper, Text } from '@mantine/core';
 import profileImage from '@/assets/img/chrisjones.jpg';
 import classes from './AboutMe.module.css';
 

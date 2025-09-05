@@ -1,5 +1,3 @@
-;
-// import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Button, Center, Grid, Group, Paper, Text, Textarea, TextInput } from '@mantine/core';
 import { useForm } from '@mantine/form';
@@ -8,9 +6,6 @@ import classes from './Contact.module.css';
 
 
 export function Contact() {
-  // const emailRef = useRef<HTMLInputElement>(null);
-  // const nameRef = useRef<HTMLInputElement>(null);
-  // const [loading, setLoading] = useState(false);
 
   const form = useForm({
     mode: 'uncontrolled',
@@ -28,8 +23,7 @@ export function Contact() {
   });
   const handleSubmit = (values: any) => {
     emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, values, import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
-      .then((result) => {
-        console.log('Email sent successfully:', result.text);
+      .then(() => {
         notifications.show({
           title: 'Success!',
           message: 'Your message has been sent.',
@@ -38,10 +32,9 @@ export function Contact() {
         form.reset(); // Reset form after successful submission
       })
       .catch((error) => {
-        console.error('Email sending failed:', error);
         notifications.show({
           title: 'Error',
-          message: 'Failed to send your message. Please try again.',
+          message: `Failed to send your message. ${error}`,
           color: 'red',
         });
       });
