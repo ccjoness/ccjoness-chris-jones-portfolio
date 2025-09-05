@@ -5,31 +5,6 @@ import profileImage from '@/assets/img/chrisjones.jpg';
 import classes from './AboutMe.module.css';
 
 export function AboutMe() {
-  const theme = useMantineTheme();
-
-  const xs = useMediaQuery(`(min-width: ${theme.breakpoints.xs}) and (max-width: ${theme.breakpoints.sm})`);
-  const sm = useMediaQuery(`(min-width: ${theme.breakpoints.sm}) and (max-width: ${theme.breakpoints.md})`);
-  const md = useMediaQuery(`(min-width: ${theme.breakpoints.md}) and (max-width: ${theme.breakpoints.lg})`);
-  const lg = useMediaQuery(`(min-width: ${theme.breakpoints.lg}) and (max-width: ${theme.breakpoints.xl})`);
-  const xl = useMediaQuery(`(min-width: ${theme.breakpoints.xl})`);
-
-  useEffect(() => {
-    if (lg) {
-      console.log('lg');
-    }
-    else if (md) {
-      console.log('md');
-    }
-    else if (sm) {
-      console.log('sm');
-    }
-    else if (xl) {
-      console.log('xl');
-    }
-    else if (xs) {
-      console.log('xs');
-    }
-  }, [lg, md, sm, xl, xs]);
   return (
     <Paper className={classes.paperHeight}>
       <div className={classes.textHxVCenter}>
