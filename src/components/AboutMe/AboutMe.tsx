@@ -29,9 +29,9 @@ export function AboutMe() {
           <Grid.Col span={{ xs: 12, sm: 12, md: 12, lg: 9, xl: 9 }}>
             <Flex h="100%" gap="0" justify="center" align="center" direction="column" wrap="nowrap">
               <Text ta="left">
-                Hello, I’m Christopher Jones,
+                Hello!
                 <Text mt="md">
-                  a software engineer and technical leader with 10+ years of
+                  I’m Chris Jones, a software engineer and technical leader with 10+ years of
                   experience building cloud-native applications and scaling engineering teams. I’ve
                   grown remote teams from the ground up, delivered secure platforms, and thrive at
                   the intersection of engineering and leadership by designing systems, mentoring
