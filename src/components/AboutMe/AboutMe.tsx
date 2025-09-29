@@ -29,19 +29,15 @@ export function AboutMe() {
           <Grid.Col span={{ xs: 12, sm: 12, md: 12, lg: 9, xl: 9 }}>
             <Flex h="100%" gap="0" justify="center" align="center" direction="column" wrap="nowrap">
               <Text ta="left">
-                Hello, I'm Chris Jones.
+                Hello, I’m Christopher Jones,
                 <Text mt="md">
-                  I have been passionate about technology since childhood. When my family first got
-                  a computer, I was fascinated by how websites worked. At 13, I started teaching
-                  myself web development by studying the source code of sites I admired. Soon after,
-                  I began building websites for family and friends' businesses, and by the time I
-                  was 18, I landed my first tech job.
-                </Text>
-                <Text mt="md">
-                  In addition to technology, I am passionate about music and woodworking. I enjoy
-                  attending small venues to discover new bands, and as a woodworker, I particularly
-                  enjoy woodturning. Crafting something beautiful on the lathe brings me immense
-                  joy.
+                  a software engineer and technical leader with 10+ years of
+                  experience building cloud-native applications and scaling engineering teams. I’ve
+                  grown remote teams from the ground up, delivered secure platforms, and thrive at
+                  the intersection of engineering and leadership by designing systems, mentoring
+                  developers, and creating teams where people can do their best work. Outside of
+                  work, I enjoy music, woodworking, and exploring new creative projects that
+                  challenge me to learn and build in different ways.
                 </Text>
               </Text>
             </Flex>
