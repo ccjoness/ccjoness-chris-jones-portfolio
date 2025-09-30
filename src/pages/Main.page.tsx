@@ -5,6 +5,7 @@ import { useDisclosure, useIntersection } from '@mantine/hooks';
 import { AboutMe } from '@/components/AboutMe/AboutMe';
 import { Contact } from '@/components/Contact/Contact';
 // import {Articles} from '@/components/Articles/Articles';
+// import { ParticlesBackground } from '@/components/ParticlesBackground/ParticlesBackground';
 import { Projects } from '@/components/Projects/Projects';
 import globalStyles from '@/styles/global.module.css';
 
@@ -110,12 +111,13 @@ export function MainPage() {
         navbar={{ width: 300, breakpoint: 'sm', collapsed: { mobile: !opened } }}
         padding="md"
       >
+        {/*<ParticlesBackground />*/}
         <AppShell.Header>
-          <Group h="100%" px="md">
-            <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-          </Group>
-        </AppShell.Header>
-        <AppShell.Navbar p="md" bd="none">
+            <Group h="100%" px="md">
+              <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
+            </Group>
+          </AppShell.Header>
+          <AppShell.Navbar p="md" bd="none">
           <Flex
             h="100%"
             direction={{ base: 'column' }}
