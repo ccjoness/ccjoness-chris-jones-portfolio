@@ -51,3 +51,10 @@
 .contactResetButton {
     background-color: #CC6547 !important;
 }
+
+.gRecaptchaSmall {
+    transform: scale(0.77);
+    transform-origin: 0 0;
+    margin-top: -10px;
+    margin-right: -60px;
+}
